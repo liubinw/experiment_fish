@@ -8,12 +8,57 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/textView"
+        android:layout_width="172dp"
+        android:layout_height="35dp"
+        android:text="Experiments and Tests:"
+        app:layout_constraintBottom_toTopOf="@+id/button_click"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="95dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_scroll"
+        app:layout_constraintEnd_toStartOf="@+id/button_clean"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ScrollView
+        android:id="@+id/text_view_scroll"
+        android:layout_width="322dp"
+        android:layout_height="212dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_click">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border">
+
+            <TextView
+                android:id="@+id/textView_display"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:text="TextView" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button_clean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button_clean"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_click"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
